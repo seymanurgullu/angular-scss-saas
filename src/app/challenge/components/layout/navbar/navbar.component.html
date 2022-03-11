@@ -1,0 +1,21 @@
+<div class="wrapper d-flex">
+  <div class="form-control d-flex align-items-center hide-for-mobile">
+    <app-icon class="form-icon" icon="icon-search"></app-icon>
+    <input class="input-control" placeholder="Search" />
+  </div>
+  <div
+    (click)="toggleSideBar.emit()"
+    class="wrapper__sidebar d-flex align-items-center hide-for-desktop"
+  >
+    <app-icon icon="icon-bars"></app-icon>
+  </div>
+  <div class="icons d-flex align-items-center">
+    <app-icon
+      class="icons__icon hide-for-desktop"
+      icon="icon-search"
+    ></app-icon>
+    <app-icon class="icons__icon" icon="icon-inbox"></app-icon>
+    <app-icon class="icons__icon" icon="icon-bell"></app-icon>
+    <img src="assets/images/avatar.svg" />
+  </div>
+</div>

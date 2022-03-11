@@ -1,0 +1,55 @@
+@import "~assets/scss/variables";
+
+.wrapper {
+  margin-bottom: 14px;
+
+  &__badge {
+    padding: 7px;
+    width: 21px;
+    height: 21px;
+    background: $blue;
+    border-radius: 50px;
+    color: white;
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  &__link {
+    &--icon {
+      margin-right: 7px;
+    }
+
+    &--text {
+      font-size: $size-sm;
+      display: inline;
+      color: $dark;
+      font-weight: 500;
+      line-height: 21px;
+    }
+  }
+
+  &__header {
+    margin-bottom: 7px;
+    &--title {
+      font-size: $size-sm;
+      color: $grey;
+      padding: 7px;
+      line-height: 21px;
+      font-weight: normal;
+    }
+  }
+
+  &__card {
+    padding: 7px;
+    &:not(:last-child) {
+      margin-bottom: 7px;
+    }
+  }
+}
+
+.active {
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 6px 0px 0px 6px;
+  padding-left: 14px;
+  border-right: 2px solid $blue;
+}

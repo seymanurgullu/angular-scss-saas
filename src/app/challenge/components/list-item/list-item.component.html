@@ -1,0 +1,30 @@
+<div class="list d-flex">
+  <div class="d-flex w-100">
+    <img class="list__image" [src]="image" />
+    <div class="list__information w-100 d-flex justify-content-space-between">
+      <div>
+        <h5 class="list__title">{{ title }}</h5>
+        <div class="d-flex align-items-center list__tags">
+          <p class="list__tags--text">{{ tag }}</p>
+          <p *ngIf="isSale" class="list__tags--sale">Sale</p>
+          <p class="list__tags--money">{{ money }}</p>
+        </div>
+        <div class="list__rating">
+          <ng-container *ngFor="let star of stars; let index = index">
+            <app-icon
+              *ngIf="index < rating; else empty_star"
+              icon="icon-star"
+            ></app-icon>
+            <ng-template #empty_star
+              ><app-icon icon="icon-empty-star"></app-icon
+            ></ng-template>
+          </ng-container>
+        </div>
+      </div>
+      <div class="d-flex list__wrapper">
+        <h6 class="list__wrapper--money">{{ totalMoney }}</h6>
+        <p class="list__wrapper--review">{{ review }}</p>
+      </div>
+    </div>
+  </div>
+</div>

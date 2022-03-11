@@ -1,0 +1,14 @@
+<div class="wrapper">
+  <div>
+    <img class="wrapper__image" [src]="imageSrc" />
+  </div>
+  <div class="header d-flex justify-content-space-between">
+    <h3 class="header__title">{{ title }}</h3>
+    <div class="header__rating d-flex align-items-center">
+      <app-icon icon="icon-star"></app-icon>
+      <p class="header__rating--text">{{ rating }}</p>
+    </div>
+  </div>
+  <p class="wrapper__description">{{ description }}</p>
+  <h5 class="wrapper__money">{{ money }}</h5>
+</div>

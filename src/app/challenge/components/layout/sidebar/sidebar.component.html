@@ -1,0 +1,16 @@
+<div class="sidebar d-flex">
+  <img class="sidebar__image" src="assets/images/logo.svg" />
+  <div class="sidebar__items h-100">
+    <app-siderbar-items
+      title="FAVORITES"
+      [items]="favouriteSideBarItems"
+    ></app-siderbar-items>
+    <app-siderbar-items
+      title="APPLICATION"
+      [items]="applicationSideBarItems"
+    ></app-siderbar-items>
+  </div>
+  <div>
+    <app-sidebar-profile userName="Amy Elsner"></app-sidebar-profile>
+  </div>
+</div>

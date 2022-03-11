@@ -1,0 +1,22 @@
+<div class="wrapper" [ngClass]="container">
+  <div class="wrapper__header">
+    <h5 class="wrapper__header--title">{{ title }}</h5>
+  </div>
+  <ng-container *ngFor="let item of items">
+    <div
+      class="d-flex justify-content-space-between wrapper__card"
+      [ngClass]="item.isActive ? 'active' : ''"
+    >
+      <a class="wrapper__link d-flex align-items-center">
+        <app-icon class="wrapper__link--icon" [icon]="item.icon"></app-icon>
+        <p class="wrapper__link--text">{{ item.text }}</p>
+      </a>
+      <div
+        class="d-flex justify-content-center align-items-center wrapper__badge"
+        *ngIf="item.badge"
+      >
+        {{ item.badge }}
+      </div>
+    </div>
+  </ng-container>
+</div>

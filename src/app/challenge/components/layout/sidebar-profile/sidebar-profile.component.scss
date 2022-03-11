@@ -1,0 +1,23 @@
+.profile {
+  height: 4.875rem;
+
+  &__image {
+    margin-right: 0.4375rem;
+  }
+
+  &__text {
+    display: inline;
+    margin-right: 0.4375rem;
+  }
+
+  &__icon {
+    margin-right: 0.4375rem;
+  }
+
+  &__wrapper {
+    padding: 7px 14px 14px 14px;
+    border-top: 1px solid #e0e0e0;
+    margin: 0 0.875rem;
+  }
+}
+
