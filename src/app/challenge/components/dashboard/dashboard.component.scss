@@ -1,72 +1,15 @@
 @import "~assets/scss/mixins";
-@import "~assets/scss/variables";
 
-.dashboard {
-  padding: 28px;
-  background: #fafafa;
-  height: calc(100% - 56px);
+.card {
 
-  &__cards {
-    width: 100%;
-    flex-wrap: wrap;
-    @include breakpoint-down(medium) {
-      flex-direction: column;
-      flex-wrap: nowrap;
-    }
+  &:not(:last-child) {
+    margin-right: 28px;
   }
 
-  &__card {
-    flex: 1;
+  @include breakpoint-down(medium) {
     &:not(:last-child) {
-      margin-right: 28px;
-    }
-    @include breakpoint-down(medium) {
-      &:not(:last-child) {
-        margin-right: 0px;
-        margin-bottom: 28px;
-      }
-    }
-  }
-
-  &__header {
-    &--title {
-      font-style: normal;
-      font-weight: 500;
-      font-size: 28px;
-      line-height: 42px;
-      color: $black;
-      margin-bottom: 7px;
-    }
-
-    &--subtitle {
-      font-style: normal;
-      font-weight: normal;
-      font-size: 21px;
-      line-height: 32px;
-      color: $grey;
+      margin-right: 0px;
       margin-bottom: 28px;
-    }
-  }
-
-  &__list {
-    padding: 21px;
-    margin-bottom: 28px;
-    background: $white;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03),
-      0px 0px 2px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
-    flex-direction: column;
-    &--header {
-      width: 100%;
-      margin-bottom: 21px;
-    }
-
-    &--item {
-      width: 100%;
-      flex-direction: column;
-      &:not(:last-child) {
-        margin-bottom: 21px;
-      }
     }
   }
 }

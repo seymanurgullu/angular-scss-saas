@@ -1,33 +1,40 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-challenge-layout',
   template: `
-    <div class="d-flex">
+    <div class="flex">
       <app-sidebar [ngClass]="toggleClassSidebar"></app-sidebar>
       <div [ngClass]="toggleClassPage" class="page">
         <app-navbar (toggleSideBar)="toggle()"></app-navbar>
-        <div (click)="toggle()">
+        <div (click)="outsideClick()">
           <router-outlet></router-outlet>
         </div>
       </div>
     </div>
   `,
-  styleUrls: ['./challange-layout-component.scss'],
+  styleUrls: ['./challenge.layout.component.scss']
 })
+
 export class ChallengeLayoutComponent {
   toggled = false;
-  toggleClassSidebar = 'untoggle';
-  toggleClassPage = 'unToggledPage';
+  toggleClassSidebar = 'md:block hidden';
+  toggleClassPage = '';
 
   toggle(): void {
+    this.toggleClassSidebar =
+      'block fixed md:static md:z-0 z-1 md:h-auto h-screen';
+    this.toggleClassPage =
+      'overflow-y-hidden md:overflow-y-auto block toggledPage';
+    this.toggled = true;
+  }
+
+  outsideClick() {
     if (this.toggled) {
-      this.toggleClassSidebar = 'untoggle';
-      this.toggleClassPage = 'unToggledPage';
-    } else {
-      this.toggleClassSidebar = 'toggle';
-      this.toggleClassPage = 'toggledPage';
+      this.toggleClassSidebar = 'md:block hidden';
+      this.toggleClassPage = '';
+      this.toggled = false;
     }
-    this.toggled = !this.toggled;
   }
 }
+

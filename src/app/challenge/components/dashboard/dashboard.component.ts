@@ -4,7 +4,8 @@ import { CardItems, ListItems } from '@shared/models';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss'],
+  styleUrls: ['./dashboard.component.scss']
+
 })
 export class DashboardComponent {
   cards: CardItems[] = [

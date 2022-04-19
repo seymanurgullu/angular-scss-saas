@@ -1,14 +1,22 @@
-<div class="wrapper">
+<div
+  class=" p-3 border-width-1 border-black-alpha-30 sm:border-round shadow-2  align-items-center ">
   <div>
-    <img class="wrapper__image" [src]="imageSrc" />
+    <img class="flex mb-3 w-full h-21rem " [src]="imageSrc"/>
   </div>
-  <div class="header d-flex justify-content-space-between">
-    <h3 class="header__title">{{ title }}</h3>
-    <div class="header__rating d-flex align-items-center">
+  <div class=" flex mb-3 justify-content-between">
+    <h3 class="mr-3 font-medium text-lg line-height-3 text-black-alpha-90 ">
+      {{ title }}
+    </h3>
+    <div class="flex align-items-center">
       <app-icon icon="icon-star"></app-icon>
-      <p class="header__rating--text">{{ rating }}</p>
+      <p class="flex ml-1 font-medium line-height-1 text-sm text-black-alpha-90">
+        {{ rating }}
+      </p>
     </div>
   </div>
-  <p class="wrapper__description">{{ description }}</p>
-  <h5 class="wrapper__money">{{ money }}</h5>
+  <p
+    class="flex h-3rem font-normal text-sm line-height-3 ml-1 font-medium line-height-1 text-sm text-600">
+    {{ description }}
+  </p>
+  <h5 class="flex font-normal text-blue-500 text-lg line-height-3">{{ money }}</h5>
 </div>

@@ -4,7 +4,7 @@ import { SideBarItems } from '@shared/models';
 @Component({
   selector: 'app-siderbar-items',
   templateUrl: './siderbar-items.component.html',
-  styleUrls: ['./siderbar-items.component.scss'],
+
 })
 export class SiderbarItemsComponent {
   @Input()

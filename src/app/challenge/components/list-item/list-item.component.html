@@ -1,15 +1,26 @@
-<div class="list d-flex">
-  <div class="d-flex w-100">
-    <img class="list__image" [src]="image" />
-    <div class="list__information w-100 d-flex justify-content-space-between">
+<div class="flex md:w-full w-screen">
+  <div class="flex w-full mb-3">
+    <img class="w-5rem h-5rem mr-3 border-round" [src]="image" />
+    <div class="w-full md:flex block justify-content-between">
       <div>
-        <h5 class="list__title">{{ title }}</h5>
-        <div class="d-flex align-items-center list__tags">
-          <p class="list__tags--text">{{ tag }}</p>
-          <p *ngIf="isSale" class="list__tags--sale">Sale</p>
-          <p class="list__tags--money">{{ money }}</p>
+        <h5 class="font-medium text-lg line-height-3 text-black-alpha-100">
+          {{ title }}
+        </h5>
+        <div class="flex align-items-center">
+          <p class="text-sm line-height-2 text-gray-300 my-2 mr-3">{{ tag }}</p>
+          <p
+            *ngIf="isSale"
+            class="font-medium text-xs line-height-2 border-round mr-3 p-1 text-purple-600 bg-purple-100"
+          >
+            Sale
+          </p>
+          <p
+            class="font-medium text-xs line-height-2 bg-green-100 text-green-600 p-1 border-round"
+          >
+            {{ money }}
+          </p>
         </div>
-        <div class="list__rating">
+        <div class="list-rating">
           <ng-container *ngFor="let star of stars; let index = index">
             <app-icon
               *ngIf="index < rating; else empty_star"
@@ -21,9 +32,13 @@
           </ng-container>
         </div>
       </div>
-      <div class="d-flex list__wrapper">
-        <h6 class="list__wrapper--money">{{ totalMoney }}</h6>
-        <p class="list__wrapper--review">{{ review }}</p>
+      <div class="flex flex-column list-wrapper">
+        <h6
+          class="font-medium text-base line-height-3 text-black-alpha-90 mb-3"
+        >
+          {{ totalMoney }}
+        </h6>
+        <p class="text-xs line-height-2 text-600">{{ review }}</p>
       </div>
     </div>
   </div>

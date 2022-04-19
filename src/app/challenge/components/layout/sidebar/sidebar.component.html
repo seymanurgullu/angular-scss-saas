@@ -1,6 +1,8 @@
-<div class="sidebar d-flex">
-  <img class="sidebar__image" src="assets/images/logo.svg" />
-  <div class="sidebar__items h-100">
+<div
+  class="flex flex-column w-17rem h-full bg-white border-bluegray-100 border-1"
+>
+  <img class="mb-3 h-4rem" src="assets/images/logo.svg" />
+  <div class="h-100">
     <app-siderbar-items
       title="FAVORITES"
       [items]="favouriteSideBarItems"
@@ -10,7 +12,7 @@
       [items]="applicationSideBarItems"
     ></app-siderbar-items>
   </div>
-  <div>
+  <div class="border-top-1 mx-4 border-600">
     <app-sidebar-profile userName="Amy Elsner"></app-sidebar-profile>
   </div>
 </div>

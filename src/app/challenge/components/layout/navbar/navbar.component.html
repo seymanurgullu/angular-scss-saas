@@ -1,21 +1,20 @@
-<div class="wrapper d-flex">
-  <div class="form-control d-flex align-items-center hide-for-mobile">
-    <app-icon class="form-icon" icon="icon-search"></app-icon>
-    <input class="input-control" placeholder="Search" />
+<div
+  class="flex pt-3 pl-4 h-4rem 1px solid navbar justify-content-between border-bottom-1 border-gray-50"
+>
+  <div class="md:flex hidden align-items-center mr-7 form-control">
+    <app-icon class="absolute pt-6-0" icon="icon-search"></app-icon>
+    <input class="flex w-full pl-5 border-none mr-3 outline-none" placeholder="Search" />
   </div>
   <div
     (click)="toggleSideBar.emit()"
-    class="wrapper__sidebar d-flex align-items-center hide-for-desktop"
+    class="flex align-items-center md:hidden"
   >
     <app-icon icon="icon-bars"></app-icon>
   </div>
-  <div class="icons d-flex align-items-center">
-    <app-icon
-      class="icons__icon hide-for-desktop"
-      icon="icon-search"
-    ></app-icon>
-    <app-icon class="icons__icon" icon="icon-inbox"></app-icon>
-    <app-icon class="icons__icon" icon="icon-bell"></app-icon>
+  <div class="flex mr-4 align-items-center">
+    <app-icon class="icons-icon md:hidden mr-4" icon="icon-search"></app-icon>
+    <app-icon class="icons-icon mr-4" icon="icon-inbox"></app-icon>
+    <app-icon class="icons-icon mr-4" icon="icon-bell"></app-icon>
     <img src="assets/images/avatar.svg" />
   </div>
 </div>
