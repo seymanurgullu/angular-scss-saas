@@ -1,0 +1,15 @@
+@import "~assets/scss/mixins";
+.page {
+  width: calc(100% - 280px);
+
+  @include breakpoint-down(medium) {
+    width: 100%;
+  }
+}
+
+.toggledPage {
+  @include breakpoint-down(medium) {
+    opacity: 0.5;
+    background-color: grey;
+  }
+}
