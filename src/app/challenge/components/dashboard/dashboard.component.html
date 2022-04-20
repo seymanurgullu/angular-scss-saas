@@ -28,8 +28,8 @@
     </div>
   </div>
 
-  <div class="flex flex-wrap md:flex-nowrap md:flex-row flex-column">
-    <div class="flex-1 card" *ngFor="let card of cards">
+  <div class="grid">
+    <div class="col-12 md:col-6 lg:col-4" *ngFor="let card of cards">
       <app-card
         [imageSrc]="card.image"
         [title]="card.title"
